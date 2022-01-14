@@ -1,0 +1,191 @@
+/* Vars */
+
+:root {
+  --height-header: 100px;
+  --height-footer: 50px;
+  --height-logo: 50px;
+
+  --width-min: 1200px;
+
+  --padding-x: 0 50px;
+
+  --color-black: #505050;
+
+  --color-river: #d2e8ff;
+  --color-river-hover: #86bdf7;
+
+  --color-district-1: rgb(192, 205, 81);
+  --color-district-2: rgb(184, 198, 75);
+  --color-district-3: rgb(199, 212, 87);
+  --color-district-4: rgb(162, 176, 56);
+  --color-district-5: rgb(134, 149, 29);
+  --color-district-6: rgb(177, 191, 68);
+  --color-district-7: rgb(141, 156, 36);
+  --color-district-8: rgb(155, 170, 49);
+  --color-district-9: rgb(148, 163, 43);
+  --color-district-10: rgb(170, 183, 62);
+  --color-district-hover: lightgreen;
+
+  --transition-time: 0.3s;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 16px;
+  height: 100vh;
+  background-color: aliceblue;
+  color: var(--color-black);
+}
+
+#app {
+  height: 100vh;
+  min-width: var(--width-min);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: var(--padding-x);
+  height: var(--height-header);
+  line-height: var(--height-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  height: calc(100% - (var(--height-header) + var(--height-footer)));
+}
+
+footer {
+  padding: var(--padding-x);
+  height: var(--height-footer);
+  line-height: var(--height-footer);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo__img {
+  display: inline-block;
+  height: var(--height-logo);
+  transition: transform var(--transition-time) ease-in-out;
+}
+
+.logo__img:hover {
+  transform: scale(1.7);
+}
+
+.copyright__author {
+  font-size: 0.8em;
+}
+
+/* Map */
+.map {
+  height: 100%;
+  text-align: center;
+}
+
+.map svg {
+  max-height: 100%;
+}
+
+.river {
+  fill: var(--color-river);
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+  transition: fill var(--transition-time) ease-in-out;
+}
+
+.river:hover {
+  fill: var(--color-river-hover);
+}
+
+.division {
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+  transition: fill var(--transition-time) ease-in-out;
+}
+
+.division:hover {
+  fill: var(--color-district-hover);
+}
+
+/* darnytskyi */
+.darnytskyi {
+  fill: var(--color-district-1);
+}
+
+/* dniprovskyi */
+.dniprovskyi {
+  fill: var(--color-district-2);
+}
+
+/* desnianskyi */
+.desnianskyi {
+  fill: var(--color-district-3);
+}
+/* holosiiv */
+.holosiiv {
+  fill: var(--color-district-4);
+}
+
+/* pecherskyi */
+.pecherskyi {
+  fill: var(--color-district-5);
+}
+
+/* solomianskyi */
+.solomianskyi {
+  fill: var(--color-district-6);
+}
+/* shevchenkivskyi */
+.shevchenkivskyi {
+  fill: var(--color-district-7);
+}
+
+/* sviatoshynskyi */
+.sviatoshynskyi {
+  fill: var(--color-district-8);
+}
+
+/* podil */
+.podil {
+  fill: var(--color-district-9);
+}
+
+/* obolonskyi */
+.obolonskyi {
+  fill: var(--color-district-10);
+}
+
+/* Division data */
+.division-information {
+  position: absolute;
+  width: 400px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.division-information__description {
+  margin: 0;
+}
